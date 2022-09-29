@@ -183,7 +183,7 @@ export function UserProvider(props) {
   const [ready, setReady] = React.useState(false);
 
   React.useEffect(() => {
-    fetch("http://localhost:3001/user", {
+    fetch("http://localhost:5000/user", {
       method: "GET",
       credentials: "include",
     })
@@ -206,7 +206,7 @@ export function UserProvider(props) {
     login: async (body) => {
       setError("");
       setIsFetching(true);
-      const res = await fetch("http://localhost:3001/user/login", {
+      const res = await fetch("http://localhost:5000/user/login", {
         method: "POST",
         credentials: "include",
         headers: {
@@ -240,7 +240,7 @@ export function UserProvider(props) {
       formData.append("password", body.password);
       formData.append("file", body.file);
 
-      const res = await fetch("http://localhost:3001/user/register", {
+      const res = await fetch("http://localhost:5000/user/register", {
         method: "POST",
         credentials: "include",
         body: formData,
@@ -268,7 +268,7 @@ export function UserProvider(props) {
       formData.append("name", body.name);
       formData.append("file", body.profilePic);
 
-      const res = await fetch("http://localhost:3001/user", {
+      const res = await fetch("http://localhost:5000/user", {
         method: "PATCH",
         credentials: "include",
         body: formData,
@@ -290,7 +290,7 @@ export function UserProvider(props) {
     },
 
     logout: async () => {
-      await fetch("http://localhost:3001/user/logout", {
+      await fetch("http://localhost:5000/user/logout", {
         method: "POST",
         credentials: "include",
       });

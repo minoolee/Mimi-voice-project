@@ -1,5 +1,5 @@
 import * as React from "react";
-/*  import { useState } from "react";  */
+
 import Layout from "./layout";
 import useUser from "../context/useUser";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export default function Login() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
-  const [file, setFile] = React.useState();
+  /*  const [file, setFile] = React.useState(); */
   const [showRegister, setShowRegister] = React.useState(false);
   const [name, setName] = React.useState("");
   const user = useUser();
@@ -31,7 +31,7 @@ export default function Login() {
       email: email,
       password: password,
       name: name,
-      file: file,
+      /*  file: file, */
     });
 
     if (status === 200) {

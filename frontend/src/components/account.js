@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import { useState } from "react";
 import Layout from "./layout";
 import useUser from "../context/useUser";
 import { useNavigate } from "react-router-dom";
@@ -7,9 +7,9 @@ import { useNavigate } from "react-router-dom";
 export default function Account() {
   const user = useUser();
   const navigate = useNavigate();
-  const [name, setName] = React.useState(user.data.name);
+  const [name, setName] = useState(user.data.name);
   /*  const [profilePic, setProfilePic] = React.useState(""); */
-  const [showSuccess, setShowSuccess] = React.useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleLogout = async () => {
     await user.logout();
@@ -20,7 +20,7 @@ export default function Account() {
     e.preventDefault();
     const status = await user.update({
       name,
-      /* profilePic, */
+      /*   profilePic,  */
     });
 
     if (status === 200) {
@@ -59,9 +59,9 @@ export default function Account() {
               onChange={(e) => setProfilePic(e.target.files[0])}
             />
           </div> */}
-          {/*   <button>{user.isFetching ? "fetching..." : "Updaten"}</button>
+          <button>{user.isFetching ? "fetching..." : "Updaten"}</button>
           {user.error && <div className="error">{user.error}</div>}
-          {showSuccess && <div className="success">Update war erfolgreich</div>} */}
+          {showSuccess && <div className="success">Update war erfolgreich</div>}
         </form>
       </div>
     </Layout>
