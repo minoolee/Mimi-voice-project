@@ -1,4 +1,4 @@
-const User = require("../../models/User");
+const User = require("../../mdels/User");
 
 /** @type {import("express").RequestHandler} */
 module.exports = async (req, res, next) => {

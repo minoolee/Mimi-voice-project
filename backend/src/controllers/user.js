@@ -1,4 +1,4 @@
-const User = require("../models/User");
+const User = require("../mdels/User");
 const bcrypt = require("bcrypt");
 const crypto = require("crypto");
 const fs = require("fs/promises");
