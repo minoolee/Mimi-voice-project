@@ -1,17 +1,19 @@
 import StoreItem from "./StoreItem" 
 import React,{useState,useEffect} from 'react'
-import axios from 'axios';
+import { fetchMales } from "../util/apiCalls";
+/* import axios from 'axios';
 
 const API_URL = process.env.REACT_APP_API_URL;
 console.log({API_URL});
-axios.defaults.baseURL = API_URL; 
+axios.defaults.baseURL = API_URL;  */
 
 
 function MalesStore() {
   const [items, setItems] = useState([]);
   useEffect(()=>{
     const getItems = async ( ) => {
-      const res = await axios.get('/perfumes/males');
+      /* const res = await axios.get('/perfumes/males'); */
+      const res = await fetchMales()
        console.log(res.data); 
        setItems(res.data);
     }

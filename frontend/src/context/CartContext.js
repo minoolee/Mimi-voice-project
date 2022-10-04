@@ -1,12 +1,13 @@
 import React, { useContext, useEffect, useState } from "react"
 import useLocalStorage from "../hooks/useLocalStorage.js"
+import { fetchPerfumes } from "../util/apiCalls.js";
 /* import storeItems from "../items.json" */
-import axios from 'axios';
+/* import axios from 'axios';
 
 const API_URL = process.env.REACT_APP_API_URL;
 console.log({API_URL});
-axios.defaults.baseURL = API_URL;  
-const CartContext = React.createContext()
+axios.defaults.baseURL = API_URL;  */
+const CartContext = React.createContext() 
 
 export function useCart() {
   return useContext(CartContext)
@@ -16,7 +17,8 @@ export function CartProvider({ children }) {
   const [perfumeItems, setPerfumeItems] = useState([]);
   useEffect(()=>{
     const getItems = async ( ) => {
-      const res = await axios.get('/perfumes');
+      /* const res = await axios.get('/perfumes'); */
+      const res = await fetchPerfumes()
        console.log(res.data); 
        setPerfumeItems(res.data);
     }
@@ -66,7 +68,8 @@ export function CartProvider({ children }) {
     isCartEmpty,
     addToCart,
     removeFromCart,
-    checkout
+    checkout, 
+    perfumeItems,
   }
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>

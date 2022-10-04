@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 import alanBtn from "@alan-ai/alan-sdk-web";
 import { useCart } from "../context/CartContext";
-import storeItems from "../items.json";
+
 
 const COMMANDS = {
   OPEN_CART: "open-cart",
@@ -20,6 +20,7 @@ export default function useAlan() {
     removeFromCart,
     cart,
     checkout,
+    perfumeItems,
   } = useCart();
 
   const openCart = useCallback(() => {
@@ -42,7 +43,7 @@ export default function useAlan() {
 
   const addItem = useCallback(
     ({ detail: { name, quantity } }) => {
-      const item = storeItems.find(
+      const item = perfumeItems.find(
         (i) => i.name.toLowerCase() === name.toLowerCase()
       );
       if (item == null) {
@@ -54,7 +55,7 @@ export default function useAlan() {
         );
       }
     },
-    [alanInstance, addToCart]
+    [alanInstance, addToCart, perfumeItems]
   );
 
   const removeItem = useCallback(
