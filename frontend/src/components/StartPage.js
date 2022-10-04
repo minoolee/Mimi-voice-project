@@ -3,13 +3,11 @@ import { Link } from 'react-router-dom'
 function StartPage() {
   return (
     <div>
-      <h1>Hi I am Mimi </h1>
-      <h3>Click on me</h3>
-      <div>
-  <button>
-    <Link to='/categories/'>Categorie</Link>
+      
+  <button className='mx-96 p-72'>
+    <Link to='/categories/'>Perfumes</Link>
   </button>
-    </div> 
+    
     </div>
   )
 }

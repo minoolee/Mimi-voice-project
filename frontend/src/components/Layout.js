@@ -7,20 +7,14 @@ export default function Layout(props) {
   const user = useUser();
 
   const accountLink = user.data ? "/account" : "/login";
-
+  const linkLable = user.data ? user.data.name : "Login"
   return (
     <div className="Layout">
-      <header>
-        <Link to="/" className="logo">
-          DevQ
-        </Link>
-        <div className="spacer" />
-        <Link to={accountLink} className="icon-wrapper">
-          {/*  <BiUser size={30} color="black" /> */}
-        </Link>
-        <Link to="/create-question" className="question-button">
-          Erstellen
-        </Link>
+      <header className="flex justify-around p-5 ">
+      <h1 className="text-red-300">Mimi Voice Asis</h1>
+       <button className="text-red-300"> <Link to={accountLink}>
+         {linkLable}
+        </Link></button>
       </header>
       <main>{props.children}</main>
     </div>

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
-import Layout from "./layout";
+import Layout from "./Layout";
 import useUser from "../context/useUser";
 import { useNavigate } from "react-router-dom";
 

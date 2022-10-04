@@ -5,9 +5,10 @@ import StartPage from "./components/StartPage";
 import Categories from "./components/Categories";
 import MalesStore from "./components/MalesStore";
 import FemalesStore from "./components/FemalesStore";
-import Login from "./components/login";
+import Login from "./components/Login";
 import { UserProvider } from "./context/useUser";
-import Account from "./components/account";
+import Account from "./components/Account";
+import Layout from "./components/Layout";
 
 function App() {
   useAlan();
@@ -15,6 +16,7 @@ function App() {
   return (
     <UserProvider>
       <Router>
+      <Layout/>
         <Routes>
           <Route path="/" element={<StartPage />} />
           <Route path="/categories" element={<Categories />} />
