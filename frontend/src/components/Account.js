@@ -1,6 +1,5 @@
 import * as React from "react";
 import { useState } from "react";
-import Layout from "./Layout";
 import useUser from "../context/useUser";
 import { useNavigate } from "react-router-dom";
 
@@ -33,7 +32,7 @@ export default function Account() {
   };
 
   return (
-    <Layout>
+   
       <div className="Account">
         <div className="title">
           <h1>Das bin Ich</h1>
@@ -64,6 +63,6 @@ export default function Account() {
           {showSuccess && <div className="success">Update war erfolgreich</div>}
         </form>
       </div>
-    </Layout>
+  
   );
 }
