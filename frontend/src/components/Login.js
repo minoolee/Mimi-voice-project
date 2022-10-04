@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import Layout from "./Layout";
+
 import useUser from "../context/useUser";
 import { useNavigate } from "react-router-dom";
 
@@ -41,7 +41,7 @@ export default function Login() {
 
   if (showRegister) {
     return (
-      <Layout>
+     
         <div className="Login flex justify-content-center h-screen bg-slate-200">
           <div
             id="form"
@@ -113,12 +113,12 @@ export default function Login() {
             </form>
           </div>
         </div>
-      </Layout>
+     
     );
   }
 
   return (
-    <Layout>
+  
       <div className="Login flex justify-content-center h-screen bg-slate-200">
         <div
           id="form"
@@ -167,6 +167,6 @@ export default function Login() {
           </form>
         </div>
       </div>
-    </Layout>
+   
   );
 }
