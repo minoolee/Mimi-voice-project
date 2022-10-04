@@ -55,7 +55,7 @@ export function CartProvider({ children }) {
 
   function checkout() {
     setCart([])
-    alert("Thank you for your purchase")
+   
   }
 
   const value = {

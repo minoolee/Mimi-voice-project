@@ -9,6 +9,9 @@ import Login from "./components/Login";
 import { UserProvider } from "./context/useUser";
 import Account from "./components/Account";
 import Layout from "./components/Layout";
+import CheckoutForm from "./components/CheckoutForm";
+import Completion from "./components/Completion";
+import Payment from "./components/Payment";
 
 function App() {
   useAlan();
@@ -24,6 +27,10 @@ function App() {
           <Route path="/females" element={<FemalesStore />} />
           <Route path="/login" element={<Login />} />
           <Route path="/account" element={<Account />} />
+          <Route path="/checkout" element={<CheckoutForm />} />
+          <Route path="/completion" element={<Completion />} />
+          <Route path="/payment" element={<Payment />} />
+    
         </Routes>
         <Cart />
       </Router>

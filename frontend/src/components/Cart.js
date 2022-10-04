@@ -2,6 +2,7 @@ import CartItem from "./CartItem"
 import classnames from "classnames"
 import formatCurrency from "../util/formatCurrency"
 import { useCart } from "../context/CartContext"
+import { useNavigate } from "react-router-dom"
 
 export default function Cart() {
   const {
@@ -11,7 +12,10 @@ export default function Cart() {
     showCart,
     checkout
   } = useCart()
-  console.log(cart);
+
+  const navigate = useNavigate();
+
+  //console.log(cart);
   const totalCents = cart.reduce((sum, entry) => {
     return sum + parseFloat(entry.quantity)
   }, 0)
@@ -45,7 +49,10 @@ export default function Cart() {
             </span>
           </div>
           <button
-            onClick={checkout}
+           onClick={(e)=> {
+            checkout();
+            navigate("/payment");
+          }}
             className="text-white py-2 px-4 text-lg bg-purple-500 rounded hover:bg-purple-700 m-4"
           >
             Check out

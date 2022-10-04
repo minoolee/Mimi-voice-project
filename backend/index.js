@@ -18,7 +18,7 @@ const corsConfig = {
   origin: "http://localhost:3000",
   credentials: true,
 };
-// app.use(cors({ origin: process.env.FRONTEND_ORIGIN, credentials: true }));
+ app.use(cors({ origin: process.env.FRONTEND_ORIGIN, credentials: true }));
 
 app.use(cors(corsConfig));
 app.options("*", cors(corsConfig));
@@ -27,7 +27,8 @@ app.options("*", cors(corsConfig));
 app.use('/females',require('./src/routes/femalesPerfumes'))   */
 app.use("/perfumes", require("./src/routes/perfumes"));
 app.use("/user", require("./src/routes/user"));
-/* app.post('/drop-database', async (req, res) => {
+app.use("/stripe", require("./src/routes/stripe"));
+ app.post('/drop-database', async (req, res) => {
   await mongoose.connection.db.dropDatabase()
   res.status(200).send('OK')
 })
@@ -45,7 +46,7 @@ app.use((error, req, res, next) => {
   res.status(error.status || 500).send({
     error: error.message
   })
-}) */
+}) 
 const PORT = process.env.PORT || 5000;
 
 app.listen(port, () => {
