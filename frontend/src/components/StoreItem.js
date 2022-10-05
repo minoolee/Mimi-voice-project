@@ -1,16 +1,16 @@
-import { useState } from "react"
-import formatCurrency from "../util/formatCurrency"
-import StoreItemModal from "./StoreItemModal"
+import { useState } from "react";
+import formatCurrency from "../util/formatCurrency";
+import StoreItemModal from "./StoreItemModal";
 
 export default function StoreItem({ item }) {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   function openModal() {
-    setOpen(true)
+    setOpen(true);
   }
 
   function closeModal() {
-    setOpen(false)
+    setOpen(false);
   }
 
   return (
@@ -31,11 +31,11 @@ export default function StoreItem({ item }) {
             <h2 className="text-gray-900 title-font text-lg font-medium">
               {item.name}
             </h2>
-            <p className="mt-1">{formatCurrency(item.price.start )}</p>
+            <p className="mt-1">{formatCurrency(item.price.start)}</p>
           </div>
           <button
             onClick={openModal}
-            className="text-white py-2 px-4 text-lg bg-purple-500 rounded hover:bg-purple-700"
+            className="text-white py-2 px-4 text-lg rounded hover:bg-blue-500 m-4 bg-red-700 "
           >
             Details
           </button>
@@ -43,5 +43,5 @@ export default function StoreItem({ item }) {
       </div>
       <StoreItemModal item={item} open={open} closeModal={closeModal} />
     </>
-  )
+  );
 }

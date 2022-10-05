@@ -1,15 +1,23 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 function StartPage() {
   return (
-    <div>
-      
-  <button className='mx-96 p-72'>
-    <Link to='/categories/'>Perfumes</Link>
-  </button>
-    
+    <div className="">
+      <div className="  flex justify-center mx-4 bg-gray-100  border-2 border-gray-400 border-solid rounded-sm ">
+        <button
+          className="bg-withe m-96  py-4 px-16 border-blue-400 border-4 rounded-full  
+      "
+        >
+          <Link
+            className="  font-extrabold font-sans text-xl text-blue-400"
+            to="/categories/"
+          >
+            Perfumes
+          </Link>
+        </button>
+      </div>
     </div>
-  )
+  );
 }
 
-export default StartPage
+export default StartPage;
