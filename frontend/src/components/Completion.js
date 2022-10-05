@@ -1,5 +1,15 @@
-function Completion(props) {
-  return <h1>Thank you! 🎉</h1>;
+import userUser from "../context/useUser"
+function Completion() {
+  const user = userUser()
+  return (
+    <section>
+      <div>
+         <h1>Thank you! {user.data.name}🎉</h1>
+             <h2>See you next time</h2>
+         </div>
+     
+    </section>
+  ) 
 }
 
 export default Completion;
