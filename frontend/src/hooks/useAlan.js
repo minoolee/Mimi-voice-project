@@ -104,7 +104,7 @@ export default function useAlan() {
     setAlanInstance(
       alanBtn({
         top: "0.6rem",
-        left: "30rem",
+        left: "50%",
         key: process.env.REACT_APP_ALAN_KEY,
         onCommand: ({ command, payload }) => {
           window.dispatchEvent(new CustomEvent(command, { detail: payload }));

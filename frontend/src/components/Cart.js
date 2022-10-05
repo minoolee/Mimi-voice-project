@@ -3,8 +3,10 @@ import classnames from "classnames"
 import formatCurrency from "../util/formatCurrency"
 import { useCart } from "../context/CartContext"
 import { useNavigate } from "react-router-dom"
+import useUser from "../context/useUser"
 
 export default function Cart() {
+  const user = useUser()
   const {
     cart,
     showCartItems,
@@ -48,10 +50,17 @@ export default function Cart() {
               {formatCurrency(totalCents)}
             </span>
           </div>
+          
           <button
            onClick={(e)=> {
-            checkout();
-            navigate("/payment");
+            if (user.data){
+              checkout();
+              navigate("/payment");
+            }else {
+              checkout();
+              navigate("/login?returnurl="+encodeURIComponent("/payment"));
+            }
+            
           }}
             className="text-white py-2 px-4 text-lg bg-purple-500 rounded hover:bg-purple-700 m-4"
           >

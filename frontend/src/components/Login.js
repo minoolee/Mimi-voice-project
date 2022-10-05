@@ -1,8 +1,6 @@
 import * as React from "react";
-
-
 import useUser from "../context/useUser";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = React.useState("");
@@ -12,6 +10,7 @@ export default function Login() {
   const [name, setName] = React.useState("");
   const user = useUser();
   const navigate = useNavigate();
+  const [params] = useSearchParams();
 
   const handleLoginClick = async (e) => {
     e.preventDefault();
@@ -21,7 +20,13 @@ export default function Login() {
     });
 
     if (status === 200) {
-      navigate("/account");
+      const returnurl = params.get('returnurl');
+      if (returnurl){
+        navigate(decodeURIComponent(returnurl));
+      }else {
+        navigate("/account");
+      }
+     
     }
   };
 
