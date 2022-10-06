@@ -5,7 +5,6 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 export default function Login() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
-  /*  const [file, setFile] = React.useState(); */
   const [showRegister, setShowRegister] = React.useState(false);
   const [name, setName] = React.useState("");
   const user = useUser();
@@ -35,7 +34,6 @@ export default function Login() {
       email: email,
       password: password,
       name: name,
-      /*  file: file, */
     });
 
     if (status === 200) {
@@ -57,7 +55,7 @@ export default function Login() {
             <hr />
 
             <div className="input-group  w-1/2 mr-1">
-              <div className="label ">Email</div>
+              <div className="label">Email</div>
               <input
                 type="email"
                 className="h-8 w-full rounded-md border border-slate-300 text-sm p1-2 bg-transparent  outline-blue-600 shadow-sm"
@@ -68,7 +66,7 @@ export default function Login() {
             </div>
 
             <div className="input-group  w-1/2 mr-1">
-              <div className="label ">Password</div>
+              <div className="label">Password</div>
               <input
                 type="password"
                 className="h-8 w-full rounded-md border border-slate-300 text-sm p1-2 bg-transparent  outline-blue-600 shadow-sm"
@@ -88,18 +86,6 @@ export default function Login() {
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
-
-            {/*     <div className="input-group w-1/2 mr-1">
-                <div className="label text-sm">Profilbild</div>
-                <input
-                  type="file"
-                  className="h-8 w-full rounded-md border border-slate-300 text-sm p1-2 bg-transparent  outline-blue-600 shadow-sm"
-                  accept="image/*"
-                  placeholder="Profilbild"
-                  onChange={(e) => setFile(e.target.files[0])}
-                />
-              </div> */}
-
             <div
               className="toggle-register"
               onClick={() => setShowRegister(false)}
@@ -120,7 +106,7 @@ export default function Login() {
   }
 
   return (
-    <div className="Login   leading-loose flex justify-center flex-wrap h-screen mb-20 ml-20 mt-20  bg-slate-200 text-2xl font-medium ">
+    <div className="Login   leading-loose flex justify-center flex-wrap h-screen mb-20 ml-20 mt-20  bg-slate-200 text-2xl font-medium">
       <div
         id="form"
         className="block bg-gray-100 mb-80 p-20 rounded-x1 shadow-md shadow-gray-300  "
@@ -130,7 +116,7 @@ export default function Login() {
           <hr />
 
           <div className="input-group  w-1/2 mr-1">
-            <div className="label ">Email</div>
+            <div className="label">Email</div>
             <input
               type="email"
               className="h-8 w-full rounded-md border border-slate-300 text-sm p1-2 bg-transparent  outline-blue-600 shadow-sm"
@@ -141,7 +127,7 @@ export default function Login() {
           </div>
 
           <div className="input-group  w-1/2 mr-1">
-            <div className="label ">Password</div>
+            <div className="label">Password</div>
             <input
               type="password"
               className="h-8 w-full rounded-md border border-slate-300 text-sm p1-2 bg-transparent  outline-blue-600 shadow-sm"

@@ -7,7 +7,6 @@ export default function Account() {
   const user = useUser();
   const navigate = useNavigate();
   const [name, setName] = useState(user.data.name);
-  /*  const [profilePic, setProfilePic] = React.useState(""); */
   const [showSuccess, setShowSuccess] = useState(false);
 
   const handleLogout = async () => {
@@ -19,7 +18,6 @@ export default function Account() {
     e.preventDefault();
     const status = await user.update({
       name,
-      /*   profilePic,  */
     });
 
     if (status === 200) {
@@ -50,15 +48,6 @@ export default function Account() {
             onChange={(e) => setName(e.target.value)}
           />
         </div>
-        {/*    <div className="input-group">
-            <span>Avatar</span>
-            <input
-              type="file"
-              accept="image/*"
-              placeholder="Profilbild..."
-              onChange={(e) => setProfilePic(e.target.files[0])}
-            />
-          </div> */}
         <button className="hover:text-blue-600">
           {user.isFetching ? "fetching..." : "Updaten"}
         </button>
