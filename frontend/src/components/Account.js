@@ -7,7 +7,6 @@ export default function Account() {
   const user = useUser();
   const navigate = useNavigate();
   const [name, setName] = useState(user.data.name);
-  /*  const [profilePic, setProfilePic] = React.useState(""); */
   const [showSuccess, setShowSuccess] = useState(false);
 
   const handleLogout = async () => {
@@ -19,7 +18,6 @@ export default function Account() {
     e.preventDefault();
     const status = await user.update({
       name,
-      /*   profilePic,  */
     });
 
     if (status === 200) {
