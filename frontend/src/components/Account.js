@@ -31,11 +31,13 @@ export default function Account() {
 
   return (
     <div className="Account text-2xl   font-medium  bg-blue-200 border-gray-300 border-solid-2 p-20 mx-80 rounded-lg">
+
       <div className="title">
         <h1>Das bin Ich</h1>
         <button className="hover:text-blue-600" onClick={handleLogout}>
           logout
         </button>
+
       </div>
 
       <form className="update-box" onSubmit={handleUpdate}>

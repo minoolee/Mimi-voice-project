@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 function Categories() {
   return (
     <div className="  h-screen  mx-4 bg-gray-100  border-2 border-gray-400 border-solid rounded-sm">
+
       <div className=" inline-flex">
         <img
           style={{ width: "15%" }}
@@ -36,3 +37,5 @@ function Categories() {
 }
 
 export default Categories;
+
+  

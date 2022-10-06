@@ -29,6 +29,7 @@ export default function Layout(props) {
             {linkLable}
           </Link>
         </button>
+
       </header>
       <main>{props.children}</main>
     </div>

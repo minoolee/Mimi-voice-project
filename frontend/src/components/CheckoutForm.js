@@ -41,6 +41,7 @@ export default function CheckoutForm() {
 
   return (
     <div className="grid grid-cols-1 my-40">
+
       <div className="flex justify-center justify-items-center">
         <form
           className="flex flex-col "
@@ -62,5 +63,6 @@ export default function CheckoutForm() {
         </form>
       </div>
     </div>
+
   );
 }

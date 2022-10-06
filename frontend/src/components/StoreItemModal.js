@@ -1,4 +1,5 @@
-import { useState } from "react"; // muss useRef lernen
+
+import {  useState } from "react"; // muss useRef lernen
 import formatCurrency from "../util/formatCurrency";
 import Modal from "react-modal";
 import { useCart } from "../context/CartContext";
@@ -17,11 +18,13 @@ export default function StoreItemModal({ item, open, closeModal }) {
     /* const quantity = parseInt(quantityRef.current.value) */
     addToCart(item.id, quantity);
     closeModal();
+
   }
-  function onChangePrice(e) {
-    /* console.log(e.target.value); */
+   function onChangePrice(e){
+/* console.log(e.target.value); */
     setQuantity(e.target.value);
-  }
+   }
+
 
   return (
     <Modal
@@ -149,6 +152,7 @@ export default function StoreItemModal({ item, open, closeModal }) {
               <div className="flex mt-4">
                 <span className="title-font font-medium text-2xl text-gray-900">
                   {formatCurrency(quantity)}
+
                 </span>
                 <form onSubmit={handleSubmit} className="">
                   <div class="grid grid-cols-1">

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 function StartPage() {
   return (
     <div className="">
+
       <div className="  flex justify-center mx-4 bg-gray-100  border-2 border-gray-400 border-solid rounded-sm ">
         <img
           style={{ width: "15%" }}
@@ -20,9 +21,11 @@ function StartPage() {
             Perfumes
           </Link>
         </button>
+
       </div>
     </div>
   );
 }
+
 
 export default StartPage;
