@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-/* import "./index.scss"; */
-/* import { BiUser } from "react-icons/bi"; */
 import useUser from "../context/useUser";
 import { FcRight } from "react-icons/fc";
 import { MdSettingsVoice } from "react-icons/md";
