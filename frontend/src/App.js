@@ -12,6 +12,9 @@ import Layout from "./components/Layout";
 import CheckoutForm from "./components/CheckoutForm";
 import Completion from "./components/Completion";
 import Payment from "./components/Payment";
+import Team from "./components/Team";
+import TeamMembers from "./components/TeamMembers";
+import Footer from "./components/Footer";
 
 function App() {
   useAlan();
@@ -20,6 +23,7 @@ function App() {
     <UserProvider>
       <Router>
       <Layout/>
+  
         <Routes>
           <Route path="/" element={<StartPage />} />
           <Route path="/categories" element={<Categories />} />
@@ -30,9 +34,12 @@ function App() {
           <Route path="/checkout" element={<CheckoutForm />} />
           <Route path="/completion" element={<Completion />} />
           <Route path="/payment" element={<Payment />} />
-    
+          <Route path="/team" element={<Team/>} />
+          <Route path="/teamMembers" element={<TeamMembers/>} />
+        
         </Routes>
         <Cart />
+        <Footer/>
       </Router>
     </UserProvider>
   );

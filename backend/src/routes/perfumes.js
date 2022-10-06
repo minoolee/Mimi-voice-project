@@ -1,7 +1,7 @@
 const express = require('express');
 const perfumeRouter = express.Router()
-const females = require('../../FemalesPerfumes.js')
-const males = require('../../MalesPerfumes.js')
+const females = require('../jsonDatein/FemalesPerfumes')
+const males = require('../jsonDatein/MalesPerfumes')
 // get all perfume
 
 perfumeRouter.get('/',(req, res)=>{

@@ -15,3 +15,6 @@ return axios.get('/perfumes/males');
 export function fetchFeMales (req, res) {
   return axios.get('/perfumes/females');
   }
+  export function fetchTeam (req, res) {
+    return axios.get('/team');
+    }
