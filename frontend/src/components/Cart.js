@@ -1,9 +1,9 @@
-import CartItem from "./CartItem"
-import classnames from "classnames"
-import formatCurrency from "../util/formatCurrency"
-import { useCart } from "../context/CartContext"
-import { useNavigate } from "react-router-dom"
-import useUser from "../context/useUser"
+import CartItem from "./CartItem";
+import classnames from "classnames";
+import formatCurrency from "../util/formatCurrency";
+import { useCart } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
+import useUser from "../context/useUser";
 
 export default function Cart() {
   const user = useUser()
@@ -19,8 +19,8 @@ export default function Cart() {
 
   //console.log(cart);
   const totalCents = cart.reduce((sum, entry) => {
-    return sum + parseFloat(entry.quantity)
-  }, 0)
+    return sum + parseFloat(entry.quantity);
+  }, 0);
 
   return (
     <section className={classnames({ invisible: !showCart })}>
@@ -40,7 +40,7 @@ export default function Cart() {
           className="bg-white text-gray-700 body-font shadow-lg border rounded-lg flex flex-col"
         >
           <div className="overflow-y-auto px-4 pt-4">
-            {cart.map(entry => (
+            {cart.map((entry) => (
               <CartItem key={entry.itemId} entry={entry} />
             ))}
           </div>
@@ -62,7 +62,7 @@ export default function Cart() {
             }
             
           }}
-            className="text-white py-2 px-4 text-lg bg-purple-500 rounded hover:bg-purple-700 m-4"
+          className="text-white py-2 px-4 text-lg rounded-full hover:bg-blue-500 m-4 bg-red-700 "
           >
             Check out
           </button>
@@ -90,5 +90,5 @@ export default function Cart() {
         </div>
       </button>
     </section>
-  )
+  );
 }

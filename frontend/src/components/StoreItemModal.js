@@ -1,26 +1,26 @@
-import {  useState } from "react" // muss useRef lernen
-import formatCurrency from "../util/formatCurrency"
-import Modal from "react-modal"
-import { useCart } from "../context/CartContext"
+import {  useState } from "react"; // muss useRef lernen
+import formatCurrency from "../util/formatCurrency";
+import Modal from "react-modal";
+import { useCart } from "../context/CartContext";
 
-Modal.setAppElement("#root")
+Modal.setAppElement("#root");
 
 export default function StoreItemModal({ item, open, closeModal }) {
   const [quantity, setQuantity] = useState( item.price.start)
 
-  const { addToCart } = useCart()
+  const { addToCart } = useCart();
   /* const quantityRef = useRef() */
 
   function handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
 
     /* const quantity = parseInt(quantityRef.current.value) */
-    addToCart(item.id, quantity)
-    closeModal()
+    addToCart(item.id, quantity);
+    closeModal();
   }
    function onChangePrice(e){
 /* console.log(e.target.value); */
-    setQuantity(e.target.value)
+    setQuantity(e.target.value);
    }
 
   return (
@@ -32,15 +32,15 @@ export default function StoreItemModal({ item, open, closeModal }) {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          backgroundColor: "rgba(255, 255, 255, 0.9)"
+          backgroundColor: "rgba(255, 255, 255, 0.9)",
         },
         content: {
           margin: "10px",
           padding: "0",
           inset: "auto",
           boxShadow:
-            "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
-        }
+            "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+        },
       }}
     >
       <section className="text-gray-700 body-font overflow-hidden">
@@ -61,8 +61,8 @@ export default function StoreItemModal({ item, open, closeModal }) {
               <div className="flex mb-4">
                 <span className="flex items-center">
                   <svg
-                    fill="currentColor"
-                    stroke="currentColor"
+                    fill="red"
+                    stroke="red"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -72,8 +72,8 @@ export default function StoreItemModal({ item, open, closeModal }) {
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                   </svg>
                   <svg
-                    fill="currentColor"
-                    stroke="currentColor"
+                    fill="red"
+                    stroke="red"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -83,8 +83,8 @@ export default function StoreItemModal({ item, open, closeModal }) {
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                   </svg>
                   <svg
-                    fill="currentColor"
-                    stroke="currentColor"
+                    fill="red"
+                    stroke="red"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -94,8 +94,8 @@ export default function StoreItemModal({ item, open, closeModal }) {
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                   </svg>
                   <svg
-                    fill="currentColor"
-                    stroke="currentColor"
+                    fill="red"
+                    stroke="red"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -106,7 +106,7 @@ export default function StoreItemModal({ item, open, closeModal }) {
                   </svg>
                   <svg
                     fill="none"
-                    stroke="currentColor"
+                    stroke="red"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -151,31 +151,23 @@ export default function StoreItemModal({ item, open, closeModal }) {
                 </span>  
                 <form
                   onSubmit={handleSubmit}
-                  className="flex items-center ml-auto"
-                >
-                  <div className="flex justify-content-center">
+                  className=""
+                >    <div class="grid grid-cols-1">
+                {" "}
+                  <div className="flex">
                   <input type="radio" name="price" onChange={onChangePrice} value={item.price.start}  id="30" />
                   <label htmlFor="">30 ml {formatCurrency(item.price.start)} $</label>
-                  <br />
+                 
                   <input type="radio" name="price" onChange={onChangePrice} value={item.price.middel}  id="50"  />
                   <label htmlFor="">50 ml {formatCurrency(item.price.middel)} $</label>
-                  <br />
+               
                   <input type="radio" name="price" onChange={onChangePrice} value={item.price.full} id="100"  />
                   <label htmlFor="">100 ml{formatCurrency(item.price.full)} $</label>
                   </div>  
-                 {/*  <input
-                    type="number"
-                    defaultValue="1"
-                    ref={quantityRef}
-                    min="1"
-                    max="99"
-                    step="1"
-                    required
-                    className="leading-normal w-16 flex-1 border h-10 border-purple-500 rounded rounded-r-none px-3 relative"
-                  />  */}
+                  </div>  
                   <button
                     type="submit"
-                    className="flex text-white bg-purple-500 rounded-l-none border-0 py-2 px-3 focus:outline-none hover:bg-purple-600 rounded"
+                    className="flex text-white bg-red-700 rounded-full border-0 py-2 px-3 focus:outline-none hover:bg-blue-500 rounded-full"
                   >
                     Add To Cart
                   </button>
