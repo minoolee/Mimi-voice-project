@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 /* import "./index.scss"; */
 /* import { BiUser } from "react-icons/bi"; */
 import useUser from "../context/useUser";
+import { FcRight } from "react-icons/fc";
+import { MdSettingsVoice } from "react-icons/md";
 
 export default function Layout(props) {
   const user = useUser();
@@ -35,7 +37,8 @@ export default function Layout(props) {
             className="  
             font-extrabold font-sans text-xl text-blue-400 hover:text-white"
           >
-            Mimi Voice Asis
+            <MdSettingsVoice /> Mimi
+            <FcRight />
           </h1>
         </div>
         <button className="bg-withe   py-4 px-16 border-blue-400 border-4 hover:bg-blue-200  rounded-full">
