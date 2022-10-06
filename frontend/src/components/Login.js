@@ -45,7 +45,7 @@ export default function Login() {
 
   if (showRegister) {
     return (
-      <div className=" Login  flex justify-content-center h-screen mb-20 ml-20 mt-20 h-screen bg-slate-200 text-2xl font-bold">
+      <div className=" Login  flex justify-center flex-wrap h-screen mb-20 ml-20 mt-20 h-screen bg-slate-200 text-2xl font-medium">
         <div
           id="form"
           className="block   bg-gray-100 mb-80 p-20 rounded-x1 shadow-md shadow-slate-300 "
@@ -109,7 +109,7 @@ export default function Login() {
 
             <button
               type="submit "
-              className="bg-blue-700 w-full h-15 cursor-pointer text-white rounded-md  hover:bg-blue-600 hover:outline-offset"
+              className="bg-blue-700 w-full h-10  cursor-pointer text-white rounded-md hover:bg-red-700 rounded-full hover:text-hover:outline-offset"
             >
               {user.isFetching ? "fetching..." : "Abschicken"}
             </button>
@@ -120,7 +120,7 @@ export default function Login() {
   }
 
   return (
-    <div className="Login   leading-loose flex space-around h-screen mb-20 ml-20 mt-20  bg-slate-200 text-2xl font-bold ">
+    <div className="Login   leading-loose flex justify-center flex-wrap h-screen mb-20 ml-20 mt-20  bg-slate-200 text-2xl font-medium ">
       <div
         id="form"
         className="block bg-gray-100 mb-80 p-20 rounded-x1 shadow-md shadow-gray-300  "
@@ -159,7 +159,7 @@ export default function Login() {
 
           <button
             type="submit"
-            className="bg-blue-700 w-full h-10  cursor-pointer text-white rounded-md hover:bg-blue-600 hover:outline-offset"
+            className="bg-blue-700 w-full h-10  cursor-pointer text-white rounded-md hover:bg-red-700 rounded-full hover:text-hover:outline-offset"
           >
             {user.isFetching ? "fetching..." : "Abschicken"}
           </button>

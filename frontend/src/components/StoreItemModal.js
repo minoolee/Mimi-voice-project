@@ -193,7 +193,7 @@ export default function StoreItemModal({ item, open, closeModal }) {
 
                   <button
                     type="submit"
-                    className="flex text-white bg-red-700 rounded-l-none border-0 py-2 px-3 focus:outline-none hover:bg-blue-500 rounded"
+                    className="flex text-white bg-red-700 rounded-full border-0 py-2 px-3 focus:outline-none hover:bg-blue-500 rounded-full"
                   >
                     Add To Cart
                   </button>

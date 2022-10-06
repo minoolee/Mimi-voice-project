@@ -11,7 +11,7 @@ export default function Layout(props) {
   return (
     <div className="Layout ">
       <header className="flex   justify-around p-5 mx-4 bg-withe   border-gray-400 rounded-sm ">
-        <div className="h-15 w-15 bg-blue-700">
+        {/* <div className="h-15 w-15 bg-blue-700">
           <h1
             className="  
       font-extrabold font-sans p-3 text-2xl "
@@ -29,20 +29,19 @@ export default function Layout(props) {
           >
             Mimi Voice Asis
           </h1>
-        </div>
-        <div className="h-15 w-15 bg-blue-700">
+        </div> */}
+        <div className="bg-withe   py-4 px-16 border-blue-400 hover:bg-blue-200  border-4 rounded-full">
           <h1
             className="  
-      font-extrabold font-sans p-3 text-2xl "
-            style={{ color: "white" }}
+            font-extrabold font-sans text-xl text-blue-400 hover:text-white"
           >
             Mimi Voice Asis
           </h1>
         </div>
-        <button className="text-red-300">
+        <button className="bg-withe   py-4 px-16 border-blue-400 border-4 hover:bg-blue-200  rounded-full">
           {" "}
           <Link
-            className="font-extrabold font-sans text-2xl text-white"
+            className="font-extrabold font-sans text-xl hover:text-white text-blue-400"
             to={accountLink}
           >
             {linkLable}

@@ -54,7 +54,7 @@ export default function Cart() {
                 navigate("/login?returnurl=" + encodeURIComponent("/payment"));
               }
             }}
-            className="text-white py-2 px-4 text-lg  rounded hover:bg-blue-500 m-4 bg-red-700     "
+            className="text-white py-2 px-4 text-lg  rounded-full hover:bg-blue-500 m-4 bg-red-700     "
           >
             Check out
           </button>

@@ -19,7 +19,7 @@ export default function StoreItem({ item }) {
         <div className="block relative h-24 rounded overflow-hidden">
           <img
             alt="e-commerce"
-            className="w-30% object-cover object-center w-full h-full block"
+            className=" object-cover object-center w-50% h-full block"
             src={item.image}
           />
         </div>
@@ -35,7 +35,7 @@ export default function StoreItem({ item }) {
           </div>
           <button
             onClick={openModal}
-            className="text-white py-2 px-4 text-lg rounded hover:bg-blue-500 m-4 bg-red-700 "
+            className="text-white py-2 px-4 text-lg rounded-full hover:bg-blue-500 m-4 bg-red-700 "
           >
             Details
           </button>

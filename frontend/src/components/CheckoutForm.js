@@ -40,15 +40,27 @@ export default function CheckoutForm() {
   };
 
   return (
-    <form id="payment-form" onSubmit={handleSubmit}>
-      <PaymentElement id="payment-element" />
-      <button disabled={isProcessing || !stripe || !elements} id="submit">
-        <span id="button-text">
-          {isProcessing ? "Processing ... " : "Pay now"}
-        </span>
-      </button>
-      {/* Show any error or success messages */}
-      {message && <div id="payment-message">{message}</div>}
-    </form>
+    <div className="grid grid-cols-1 my-40">
+      <div className="flex justify-center justify-items-center">
+        <form
+          className="flex flex-col "
+          id="payment-form"
+          onSubmit={handleSubmit}
+        >
+          <PaymentElement id="payment-element" />
+          <button
+            className="bg-withe text-xl  p-3 m-5 border-blue-400 border-4 hover:bg-blue-200  rounded-full"
+            disabled={isProcessing || !stripe || !elements}
+            id="submit"
+          >
+            <span id="button-text font-extrabold font-sans  hover:text-white text-blue-400">
+              {isProcessing ? "Processing ... " : "Pay now"}
+            </span>
+          </button>
+          {/* Show any error or success messages */}
+          {message && <div id="payment-message">{message}</div>}
+        </form>
+      </div>
+    </div>
   );
 }
