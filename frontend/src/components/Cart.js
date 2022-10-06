@@ -1,26 +1,21 @@
-import CartItem from "./CartItem"
-import classnames from "classnames"
-import formatCurrency from "../util/formatCurrency"
-import { useCart } from "../context/CartContext"
-import { useNavigate } from "react-router-dom"
-import useUser from "../context/useUser"
+import CartItem from "./CartItem";
+import classnames from "classnames";
+import formatCurrency from "../util/formatCurrency";
+import { useCart } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
+import useUser from "../context/useUser";
 
 export default function Cart() {
-  const user = useUser()
-  const {
-    cart,
-    showCartItems,
-    setShowCartItems,
-    showCart,
-    checkout
-  } = useCart()
+  const user = useUser();
+  const { cart, showCartItems, setShowCartItems, showCart, checkout } =
+    useCart();
 
   const navigate = useNavigate();
 
   //console.log(cart);
   const totalCents = cart.reduce((sum, entry) => {
-    return sum + parseFloat(entry.quantity)
-  }, 0)
+    return sum + parseFloat(entry.quantity);
+  }, 0);
 
   return (
     <section className={classnames({ invisible: !showCart })}>
@@ -40,36 +35,33 @@ export default function Cart() {
           className="bg-white text-gray-700 body-font shadow-lg border rounded-lg flex flex-col"
         >
           <div className="overflow-y-auto px-4 pt-4">
-            {cart.map(entry => (
+            {cart.map((entry) => (
               <CartItem key={entry.itemId} entry={entry} />
             ))}
           </div>
           <div className="flex justify-between items-end border-t border-b py-2 px-4">
             <span className="font-bold text-lg uppercase">Total</span>
-            <span className="font-bold">
-              {formatCurrency(totalCents)}
-            </span>
+            <span className="font-bold">{formatCurrency(totalCents)}</span>
           </div>
-          
+
           <button
-           onClick={(e)=> {
-            if (user.data){
-              checkout();
-              navigate("/payment");
-            }else {
-              checkout();
-              navigate("/login?returnurl="+encodeURIComponent("/payment"));
-            }
-            
-          }}
-            className="text-white py-2 px-4 text-lg bg-purple-500 rounded hover:bg-purple-700 m-4"
+            onClick={(e) => {
+              if (user.data) {
+                checkout();
+                navigate("/payment");
+              } else {
+                checkout();
+                navigate("/login?returnurl=" + encodeURIComponent("/payment"));
+              }
+            }}
+            className="text-white py-2 px-4 text-lg  rounded-full hover:bg-blue-500 m-4 bg-red-700     "
           >
             Check out
           </button>
         </div>
       </div>
       <button
-        onClick={() => setShowCartItems(prev => !prev)}
+        onClick={() => setShowCartItems((prev) => !prev)}
         className="fixed top-0 right-0 mr-4 mt-4 w-12 bg-blue-500 p-2 rounded-full text-white hover:bg-blue-700"
       >
         <svg
@@ -90,5 +82,5 @@ export default function Cart() {
         </div>
       </button>
     </section>
-  )
+  );
 }

@@ -4,12 +4,12 @@ function Completion() {
   return (
     <section>
       <div>
-         <h1>Thank you! {user.data.name}🎉</h1>
+         <h1 className="font-medium">Thank you! {user.data.name}🎉</h1>
              <h2>See you next time</h2>
          </div>
      
     </section>
   ) 
-}
+  }
 
 export default Completion;
