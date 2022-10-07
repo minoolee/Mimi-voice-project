@@ -6,14 +6,9 @@ import { useNavigate } from "react-router-dom";
 import useUser from "../context/useUser";
 
 export default function Cart() {
-  const user = useUser()
-  const {
-    cart,
-    showCartItems,
-    setShowCartItems,
-    showCart,
-    checkout
-  } = useCart()
+  const user = useUser();
+  const { cart, showCartItems, setShowCartItems, showCart, checkout } =
+    useCart();
 
   const navigate = useNavigate();
 
@@ -46,30 +41,28 @@ export default function Cart() {
           </div>
           <div className="flex justify-between items-end border-t border-b py-2 px-4">
             <span className="font-bold text-lg uppercase">Total</span>
-            <span className="font-bold">
-              {formatCurrency(totalCents)}
-            </span>
+            <span className="font-bold">{formatCurrency(totalCents)}</span>
           </div>
-          
+
           <button
-           onClick={(e)=> {
-            if (user.data){
-              checkout();
-              navigate("/payment");
-            }else {
-              checkout();
-              navigate("/login?returnurl="+encodeURIComponent("/payment"));
-            }
-            
-          }}
-          className="text-white py-2 px-4 text-lg rounded-full hover:bg-blue-500 m-4 bg-red-700 "
+            onClick={(e) => {
+              if (user.data) {
+                checkout();
+                navigate("/payment");
+              } else {
+                checkout();
+                navigate("/login?returnurl=" + encodeURIComponent("/payment"));
+              }
+            }}
+            className="text-white py-2 px-4 text-lg  rounded-full hover:bg-blue-500 m-4 bg-red-700     "
+
           >
             Check out
           </button>
         </div>
       </div>
       <button
-        onClick={() => setShowCartItems(prev => !prev)}
+        onClick={() => setShowCartItems((prev) => !prev)}
         className="fixed top-0 right-0 mr-4 mt-4 w-12 bg-blue-500 p-2 rounded-full text-white hover:bg-blue-700"
       >
         <svg

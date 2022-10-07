@@ -10,6 +10,6 @@ function Completion() {
      
     </section>
   ) 
-}
+  }
 
 export default Completion;
