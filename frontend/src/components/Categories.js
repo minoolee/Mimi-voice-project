@@ -34,7 +34,7 @@ function Categories() {
           Female
         </Link>
       </button>
-
+      </div>
     </div>
   );
 }
