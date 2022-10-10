@@ -159,19 +159,19 @@ export default function StoreItemModal({ item, open, closeModal }) {
                 {/* {" "} */}
                   <div className="m-6">
                   <input  type="radio" name="price" onChange={onChangePrice} value={item.price.start}  id="30" />
-                  <span className="mr-80 ml-4">30ml</span>
+                  <span className="mr-72 ml-4">30ml</span>
                   <label className="" htmlFor="">{formatCurrency(item.price.start)}</label>
                   <hr />
                  </div>
                  <div className="m-6">
                   <input type="radio" name="price" onChange={onChangePrice} value={item.price.middel}  id="50"  />
-                  <span className="mr-80 ml-4">50ml</span>
+                  <span className="mr-72 ml-4">50ml</span>
                   <label htmlFor=""> {formatCurrency(item.price.middel)} </label>
                   <hr />
                   </div>
                   <div className="m-7">
                   <input type="radio" name="price" onChange={onChangePrice} value={item.price.full} id="100"  />
-                  <span className="mr-80 ml-4">100ml</span>
+                  <span className="mr-72 ml-4">100ml</span>
                   <label htmlFor="">{formatCurrency(item.price.full)} </label>
                   <hr />
                   </div>  
