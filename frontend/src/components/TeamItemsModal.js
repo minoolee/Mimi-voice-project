@@ -2,7 +2,7 @@
 /* import formatCurrency from "../util/formatCurrency"; */
 import Modal from "react-modal";
 /* import { useCart } from "../context/CartContext"; */
-
+import { FaGithub} from 'react-icons/fa';
 Modal.setAppElement("#root");
 
 export default function TeamItemModal({ item, open, closeModal }) {
@@ -32,21 +32,21 @@ export default function TeamItemModal({ item, open, closeModal }) {
           <div className="mx-auto flex items-center pt-9">
             <img
               alt="ecommerce"
-              style={{ width: "15%" }}
+              style={{ width: "25%" }}
               className="w-20px object-cover object-center rounded"
               src={item.image}
             />
             <div className="pl-8 py-2">
-              <h2 className="text-xl  title-font  tracking-widest">
+              <h1 className="text-3xl  title-font  tracking-widest">
                 {item.name}
-              </h2>
-              <h1 className="text-3xl title-font font-medium mb-1">
-                {item.professions}
               </h1>
-              <h3 className="text-3xl text-center pt-10">Skills</h3>
-              <section className="flex justify-around mb-4">
-                <div>
-                <span className="text-2xl spacing-2" >Technologie :</span>
+              <h2 className="text-2xl title-font font-medium mb-1">
+                {item.professions}
+              </h2>
+              <h3 className="text-3xl py-5">Skills</h3>
+              <section className="flex mb-4">
+                <div className="mr-9">
+                <span className="text-2xl" >Technologie :</span>
                 {item.technologie&&
              <ul>
               <li>{item.technologie[0]}</li>
@@ -68,17 +68,9 @@ export default function TeamItemModal({ item, open, closeModal }) {
               </ul>
                  }
               </div>
-             
+              <button style={{width: "50px"}}  >
+             <a  href={item.link} className="text-white"><FaGithub/></a></button>
               </section>
-              
-              <div className="flex mb-4">
-               
-              </div>
-              <p className="leading-relaxed max-w-lg"></p>
-              <div className="flex mt-4">
-               
-               
-              </div>
             </div>
           </div>
         </div>

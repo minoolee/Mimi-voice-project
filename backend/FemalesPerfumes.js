@@ -10,7 +10,7 @@ const female = [
       "full" : 100,
     },
     "target" : "female",
-    "image":"https://media.douglas.de/medias/sp5xz5695169-0-dgl-DE.jpg?context=bWFzdGVyfGltYWdlc3wxMTk0Njd8aW1hZ2UvanBlZ3xoYTUvaGZjLzI2NjcwNjQwNjI3NzQyL3NwNXh6NTY5NTE2OV8wX2RnbC1ERS5qcGd8Nzk1Zjk3MTAxNGY2NjViYTg3NWNlM2E0ZDRlN2RlNWI3MGE0MzRkNzY5MWM1ODY4YTFkNWY5OTY2Njg4NDY5Mw&grid=true&imwidth=5middel",
+    "image":"https://c.perfumesclub.com/nw/lveb/360_LVEB_50ml_370x370.gif",
     
   },
   {

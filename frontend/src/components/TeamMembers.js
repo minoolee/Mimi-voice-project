@@ -25,11 +25,11 @@ export default function TeamsMembers({ item }) {
         </div>
         <div className="mt-4 flex items-end justify-between">
           <div>
-            <span>Name</span>
-            <h3 className="text-gray-500 text-s tracking-widest title-font uppercase mb-1">
+            <span className="text-gray-500">Name</span>
+            <h3 className="text-s tracking-widest title-font uppercase mb-1">
               {item.name}
             </h3>
-          
+          <span className="text-gray-500 text-s">Profession</span>
            <h3>{item.professions}</h3>
           </div>
           <button

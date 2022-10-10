@@ -133,7 +133,7 @@ const males =[
       "full" : 220,
     },
 "target" : "male",
-"image": "https://media.douglas.de/medias/Bsnx07880763-0-global.jpg?context=bWFzdGVyfGltYWdlc3w2MzM2NHxpbWFnZS9qcGVnfGg5Ny9oYjMvMTYxMzg1NTU3ODUyNDYvQnNueDA3ODgwNzYzXzBfZ2xvYmFsLmpwZ3w2ZWFkNjAzOTJhZjg3NTEwMjdjNjIwNTQ0MDYwMDVlYTBjOWMyNzQ1MDFmNmZiMDgxM2I4OWYxN2E4MjI5M2Nm&grid=true&imwidth=550"
+"image": "https://beauty-content.douglas.de/61dc43253f5322002b9dd82b/c53lku-EDT_HIM_THE_SCENT_WHITE_211220_1.gif"
 },
 {
 "id": 12,
@@ -169,7 +169,7 @@ const males =[
       "full" : 250,
     },
 "target" : "male",
-"image": "https://media.douglas.de/medias/P9FPZh397211-0-global.jpg?context=bWFzdGVyfGltYWdlc3w0NzE4OXxpbWFnZS9qcGVnfGg1Yy9oMWEvMTYxMzU3MTg4OTU2NDYvUDlGUFpoMzk3MjExXzBfZ2xvYmFsLmpwZ3w0YjI4YzRhNzBkOWEyMjAxYzE3MWJkNTlhNTRmYmQ4M2NkOTRiN2QyZTU1ZjllOWNmMzQxNWFhZWJkNjFjYzli&grid=true&imwidth=550"
+"image": "https://beauty-content.douglas.de/61dc43253f5322002b9dd82b/Lf8cRh-737052351100_HB_BB_20_EDT_3D_Bottle_100ml.gif"
 },
 {
 "id": 15,
