@@ -162,8 +162,6 @@ export default function Login() {
             {user.error && <div className="error">{user.error}</div>}
           </form>
         </div>
-
       </div>
-    </div>
   );
 }
