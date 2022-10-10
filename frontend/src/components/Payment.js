@@ -25,15 +25,16 @@ function Payment() {
   }, []);
 
   return (
-    <>
-      <div className="flex justify-center justify-items-center" style={{}}>
-        {clientSecret && stripePromise && (
-          <Elements stripe={stripePromise} options={{ clientSecret }}>
-            <CheckoutForm />
-          </Elements>
-        )}
-      </div>
-    </>
+
+    <div className="bg-black flex justify-center text-white ">
+     
+      {clientSecret && stripePromise && (
+        <Elements stripe={stripePromise} options={{ clientSecret }}>
+          <CheckoutForm />
+        </Elements>
+      )}
+    </div>
+
   );
 }
 

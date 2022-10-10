@@ -45,16 +45,18 @@ export default function Cart() {
           </div>
 
           <button
-            onClick={(e) => {
-              if (user.data) {
-                checkout();
-                navigate("/payment");
-              } else {
-                checkout();
-                navigate("/login?returnurl=" + encodeURIComponent("/payment"));
-              }
-            }}
-            className="text-white py-2 px-4 text-lg  rounded-full hover:bg-blue-500 m-4 bg-red-700     "
+
+           onClick={(e)=> {
+            if (user.data){
+              checkout();
+              navigate("/payment");
+            }else {
+              checkout();
+              navigate("/login?returnurl="+encodeURIComponent("/payment"));
+            }
+            
+          }}
+          className="text-white py-2 px-4 text-lg rounded-full hover:bg-red-500 m-4 bg-black "
 
           >
             Check out

@@ -46,14 +46,15 @@ export default function Login() {
 
   if (showRegister) {
     return (
+     //flex justify-center flex-wrap h-screen mb-20 ml-20 mt-20 h-screen bg-slate-200 text-2xl font-medium
+        <div className="bg-black flex justify-center">
 
-        <div className=" Login flex justify-center flex-wrap h-screen mb-20 ml-20 mt-20 h-screen bg-slate-200 text-2xl font-medium">
           <div
             id="form"
-            className="block bg-gray-100 mb-80 p-20 rounded-x1 shadow-md shadow-slate-300 "
+            className="block bg-gray-100 my-20 p-20 rounded-x1 shadow-md shadow-slate-300 "
           >
             <form action="" className="box" onSubmit={handleRegisterClick}>
-              <h2 className="text-blue-700 text-3x1 font-semibold my-4">
+              <h2 className="text-black text-3x1 font-semibold my-4">
                 Register
               </h2>
               <hr />
@@ -99,7 +100,7 @@ export default function Login() {
 
               <button
                 type="submit "
-                className="bg-blue-700 w-full h-10 cursor-pointer text-white rounded-md hover:bg-red-700 rounded-full hover:text-hover:outline-offset"
+                className="bg-black w-full h-10 cursor-pointer text-white rounded-md hover:bg-red-700 rounded-full hover:text-hover:outline-offset"
                
               >
                 {user.isFetching ? "fetching..." : "Abschicken"}
@@ -114,52 +115,54 @@ export default function Login() {
  
 
   return (
-    <div className="Login   leading-loose flex justify-center flex-wrap h-screen mb-20 ml-20 mt-20  bg-slate-200 text-2xl font-medium">
-      <div
-        id="form"
-        className="block bg-gray-100 mb-80 p-20 rounded-x1 shadow-md shadow-gray-300  "
-      >
-        <form action="" className="box" onSubmit={handleLoginClick}>
-          <h2 className="text-blue-700 text-3x1 font-semibold my-4">Login</h2>
-          <hr />
+      <div className="bg-black flex justify-center">
+        <div
+          id="form"
+          className="block bg-gray-100 my-24 p-20 rounded-x1 shadow-md shadow-slate-300"
+        >
+          <form action="" className="box" onSubmit={handleLoginClick}>
+            <h2 className="text-black text-3x1 font-semibold my-4">Login</h2>
+            <hr />
 
-          <div className="input-group  w-1/2 mr-1">
-            <div className="label">Email</div>
-            <input
-              type="email"
-              className="h-8 w-full rounded-md border border-slate-300 text-sm p1-2 bg-transparent  outline-blue-600 shadow-sm"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
+            <div className="input-group  w-1/2 mr-1">
+              <div className="label">Email</div>
+              <input
+                type="email"
+                className="h-8 w-full rounded-md border border-slate-300 text-sm p1-2 bg-transparent  outline-blue-600 shadow-sm"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
 
-          <div className="input-group  w-1/2 mr-1">
-            <div className="label">Password</div>
-            <input
-              type="password"
-              className="h-8 w-full rounded-md border border-slate-300 text-sm p1-2 bg-transparent  outline-blue-600 shadow-sm"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
+            <div className="input-group  w-1/2 mr-1">
+              <div className="label">Password</div>
+              <input
+                type="password"
+                className="h-8 w-full rounded-md border border-slate-300 text-sm p1-2 bg-transparent  outline-blue-600 shadow-sm"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
 
-          <div
-            className="toggle-register"
-            onClick={() => setShowRegister(true)}
-          >
-            <p className="text-xs my-2">Ich habe noch keinen Account</p>
-          </div>
+            <div
+              className="toggle-register"
+              onClick={() => setShowRegister(true)}
+            >
+              <p className="text-sm my-2">Ich habe noch keinen Account</p>
+            </div>
 
-          <button
-            type="submit"
-            className="bg-blue-700 w-full h-10  cursor-pointer text-white rounded-md hover:bg-red-700 rounded-full hover:text-hover:outline-offset"
-          >
-            {user.isFetching ? "fetching..." : "Abschicken"}
-          </button>
+            <button
+              type="submit"
+              className="bg-black w-full h-10 cursor-pointer text-white rounded-md hover:bg-red-700 rounded-full hover:text-hover:outline-offset"
+            >
+              {user.isFetching ? "fetching..." : "Abschicken"}
+            </button>
 
-          {user.error && <div className="error">{user.error}</div>}
-        </form>
+            {user.error && <div className="error">{user.error}</div>}
+          </form>
+        </div>
+
       </div>
     </div>
   );
