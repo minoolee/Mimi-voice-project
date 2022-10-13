@@ -33,9 +33,10 @@ export default function StoreItem({ item }) {
             </h3>
             <h2 className=" title-font text-l font-medium">{item.name}</h2>
             <p className="mt-1">{formatCurrency(item.price.full)}</p>
-            <motion.button
+          </div>
+          <motion.button
               onClick={openModal}
-              className="text-black py-2 px-4 text-lg rounded-full hover:bg-red-500 m-4 bg-white "
+              className="text-white py-2 px-4 text-lg rounded-full hover:bg-red-500 m-4 bg-black "
               whileHover={{
                 scale: 1.3,
                 boxShadow: "0px 0px 8px rgb(254,255,255)",
@@ -43,7 +44,6 @@ export default function StoreItem({ item }) {
             >
               Details
             </motion.button>
-          </div>
         </div>
         </section>
         </div>
