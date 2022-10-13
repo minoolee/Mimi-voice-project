@@ -45,8 +45,6 @@ export default function StoreItem({ item }) {
             </motion.button>
           </div>
         </div>
-
-      </div>
         </section>
         </div>
       <StoreItemModal item={item} open={open} closeModal={closeModal} />
