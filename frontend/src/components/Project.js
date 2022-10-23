@@ -41,14 +41,14 @@ function Project() {
           </Link>
         </motion.button>
       </div>
-      <section className="bg-white text-black  pt-1">
+      <section className="bg-white text-black ">
         <div className="my-16 pt-14 ">
           <h3 className="text-center text-4xl pb-28">
             Summary of tools applied in the project{" "}
           </h3>
           <section className="flex justify-aroud">
             <div className="px-96">
-              <h4 className="text-3xl">Frontend</h4>
+              <h4 className="text-3xl pb-7">Frontend</h4>
               <ul className="text-xl">
                 <li>Javascript E6</li>
                 <li>Framework React js</li>
@@ -62,7 +62,7 @@ function Project() {
               </ul>
             </div>
             <div>
-              <h4 className="text-3xl ">Backend</h4>
+              <h4 className="text-3xl pb-7">Backend</h4>
               <ul className="text-xl">
                 <li>Node js</li>
                 <li>Framework Express js</li>
