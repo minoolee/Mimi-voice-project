@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 function Project() {
   return (
     <div className="bg-black text-white font-serif">
-      <div className="flex-col justify-center p-2 text-center">
+      <div className="flex-col justify-center p-2  text-center">
         <motion.h1
           className="text-5xl m-8 m-10 mt-16"
           initial={{ x: "-100vw" }}
@@ -34,16 +34,16 @@ function Project() {
           <Link id="mimiStartPage" to="/mimi/">
             <img
             style={{width:"500px"}}
-              className="mx-96 mt-8 mt-2 p-2 mb-16 pb-6"
+              className="mx-96 mt-8 mt-2 p-2 mb-16 pb-8"
               src="https://img.freepik.com/premium-vector/voice-assistant-concept-page-personal-mobile-voice-recognition-abstract-sound-waves-microphone-icon-neon-music-equalizer-smart-home-ui-element-speaking-waveform-gradient-flow_87408-196.jpg"
               alt=""
             />
           </Link>
         </motion.button>
       </div>
-      <section className="bg-white text-black ">
+      <section className="bg-white text-black  ">
         <div className="my-16 pt-14 ">
-          <h3 className="text-center text-4xl pb-28">
+          <h3 className="text-center text-4xl pt-8 pb-28">
             Summary of tools applied in the project{" "}
           </h3>
           <section className="flex justify-aroud">
