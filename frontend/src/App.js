@@ -18,6 +18,8 @@ import Footer from "./components/Footer";
 import Project from "./components/Project";
 import Thank from "./components/Thank";
 import Teachers from "./components/Teachers";
+import { ShortExpla } from "./components/ShortExpla";
+import { HamzahFather } from "./components/HamzahFather";
 
 function App() {
   useAlan();
@@ -28,7 +30,9 @@ function App() {
       <Layout/>
 
         <Routes>
-        <Route path="/" element={<Project />} />
+        <Route path="/" element={<ShortExpla />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/hamzah" element={<HamzahFather />} />
           <Route path="/mimi" element={<StartPage />} />
           <Route path="/categories" element={<Categories />} />
           <Route path="/males" element={<MalesStore />} />

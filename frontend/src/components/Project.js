@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 function Project() {
   return (
     <div className="bg-black text-white font-serif">
+     
       <div className="flex-col justify-center p-2  text-center">
         <motion.h1
           className="text-5xl m-8 m-10 mt-16"

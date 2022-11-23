@@ -1,6 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 import alanBtn from "@alan-ai/alan-sdk-web";
 import { useCart } from "../context/CartContext";
+
 /* import useUser from "../context/useUser"; */
 
 const COMMANDS = {
@@ -32,6 +33,7 @@ const COMMANDS = {
   GO_TO_TEAM : "go-to-team",
   OPEN_INFO_TEAMS : "open-info-teams",
   OPEN_THANKS : "open-thanks",
+  GO_TO_HAMZAH_FATHER : "go-to-hamzah-father",
 };
 
 export default function useAlan() {
@@ -155,6 +157,15 @@ const sentLoginButton = useCallback(() =>{
 
 const goToPerfumes = useCallback(() =>{
   const element = document.getElementById("perfumesLink");
+  if(element){
+    element.click()
+  }else{
+    alanInstance.playText("Not working")
+  }
+},[alanInstance])
+
+const goToHamzahFather = useCallback(() =>{
+  const element = document.getElementById("hamzah");
   if(element){
     element.click()
   }else{
@@ -386,6 +397,7 @@ const openThanks = useCallback(() =>{
     window.addEventListener(COMMANDS.GO_TO_TEAM, goToTeam);
     window.addEventListener(COMMANDS.OPEN_INFO_TEAMS, openInfoTeams);
     window.addEventListener(COMMANDS.OPEN_THANKS, openThanks);
+    window.addEventListener(COMMANDS.GO_TO_HAMZAH_FATHER, goToHamzahFather);
 
     return () => {
       window.removeEventListener(COMMANDS.OPEN_CART, openCart);
@@ -416,8 +428,9 @@ const openThanks = useCallback(() =>{
       window.removeEventListener(COMMANDS.GO_TO_TEAM, goToTeam);
       window.removeEventListener(COMMANDS.OPEN_INFO_TEAMS, openInfoTeams);
       window.removeEventListener(COMMANDS.OPEN_THANKS, openThanks);
+      window.removeEventListener(COMMANDS.GO_TO_HAMZAH_FATHER, goToHamzahFather);
     };
-  }, [openCart, closeCart, addItem, removeItem, purchaseItems, openMimiStartPage, openLoginLogout, openRegister ,writeEmailLogin, openProjectLink, openTeamLink, openStartLink, goToPerfumes , openMaleLink, openFemaleLink, openDetailsButton, addStartPrice, addMiddelPrice, addFullPrice, openCartLink, goToPay, sentRegisterButton, sentLoginButton, sentPaymentButton, keepShoppingLink, goToTeam, openInfoTeams, openThanks]);
+  }, [openCart, closeCart, addItem, removeItem, purchaseItems, openMimiStartPage, openLoginLogout, openRegister ,writeEmailLogin, openProjectLink, openTeamLink, openStartLink, goToPerfumes , openMaleLink, openFemaleLink, openDetailsButton, addStartPrice, addMiddelPrice, addFullPrice, openCartLink, goToPay, sentRegisterButton, sentLoginButton, sentPaymentButton, keepShoppingLink, goToTeam, openInfoTeams, openThanks, goToHamzahFather, ]);
 
   useEffect(() => {
     if (alanInstance != null) return;
